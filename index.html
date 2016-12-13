@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"> 
+<title>Magic 8-Ball</title>
+<link rel = "stylesheet" type = "text/css" href = "style.css" />
+<link rel = "stylesheet" type = "text/css" href = "http://jameswmoody.com/reset.css" />
+</head>
+<body>
+
+<button onClick="window.location.reload()">Ask</button>
+<div class="eightBallContainer">
+	<div class="ball">
+		<div class="window">
+			<div class="triangle fade-in">
+					<div class="messageContainer fade-in"><span class="message fade-in"></span></div>
+            </div>
+		</div>
+	</div>
+</div>
+
+</body>
+<script>
+
+var answer = Math.floor(Math.random()*21)
+
+switch (answer){
+	case 1:
+		document.querySelector('.message').innerHTML = "IT IS CERTAIN";
+		break;
+	case 2:
+		document.querySelector('.message').innerHTML = "IT IS DECIDEDLY SO";
+		break;
+	case 3:
+		document.querySelector('.message').innerHTML = "WITHOUT A DOUBT";
+		break;
+	case 4:
+		document.querySelector('.message').innerHTML = "YES, DEFINITELY";
+		break;
+	case 5:
+		document.querySelector('.message').innerHTML = "YOU MAY RELY ON IT";
+		break;
+	case 6:
+		document.querySelector('.message').innerHTML = "AS I SEE IT, YES";
+		break;
+	case 7:
+		document.querySelector('.message').innerHTML = "MOST LIKELY";
+		break;
+	case 8:
+		document.querySelector('.message').innerHTML = "OUTLOOK GOOD";
+		break;
+	case 9:
+		document.querySelector('.message').innerHTML = "YES";
+		break;
+	case 10:
+		document.querySelector('.message').innerHTML = "SIGNS POINT TO YES";
+		break;
+	case 11:
+		document.querySelector('.message').innerHTML = "REPLY HAZY TRY AGAIN";
+		break;
+	case 12:
+		document.querySelector('.message').innerHTML = "ASK AGAIN LATER";
+		break;
+	case 13:
+		document.querySelector('.message').innerHTML = "BETTER NOT TELL \n YOU NOW";
+		break;
+	case 14:
+		document.querySelector('.message').innerHTML = "CANNOT PREDICT NOW";
+		break;
+	case 15:
+		document.querySelector('.message').innerHTML = "CONCENTRATE AND ASK \n AGAIN";
+		break;
+	case 16:
+		document.querySelector('.message').innerHTML = "DON\'T COUNT ON IT";
+		break;
+	case 17:
+		document.querySelector('.message').innerHTML = "MY REPLY IS NO";
+		break;
+	case 18:
+		document.querySelector('.message').innerHTML = "MY SOURCES SAY NO";
+		break;
+	case 19:
+		document.querySelector('.message').innerHTML = "OUTLOOK NOT SO GOOD";
+		break;
+	case 20:
+		document.querySelector('.message').innerHTML = "VERY DOUBTFUL";
+		break;
+	default:
+		document.querySelector('.message').innerHTML = "TRY AGAIN";
+}
+</script>
+</html>
+
+<!-- 	
+	Some styling elements borrowed from J. James Rockhill's project found at http://codepen.io/rockhill/pen/EtKsv
+
+	I've made quite a few changes to make it fit my own taste but some basic elements are still present in the stylesheet. 
+
+	All functionality, however, is 100% James W Moody.
+-->
