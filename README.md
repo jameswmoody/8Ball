@@ -8,4 +8,4 @@ Just click 'Ask' to give the 8 Ball a shake.
 
 ## Acknowledgments
 
-Some styling elements borrowed from J. James Rockhill's project found at http://codepen.io/rockhill/pen/EtKsv .I've made quite a few changes to make it fit my own taste but some basic elements are still present. All functionality, however, is 100% James W Moody.
+Some styling elements borrowed from J. James Rockhill's project found at http://codepen.io/rockhill/pen/EtKsv. I've made quite a few changes to make it fit my own taste but some basic elements are still present. All functionality, however, is 100% James W Moody.
