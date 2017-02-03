@@ -1,10 +1,9 @@
-/* 
-	Some styling elements borrowed from J. James Rockhill's project found at http://codepen.io/rockhill/pen/EtKsv
-
-	I've made quite a few changes to make it fit my own taste but some basic elements are still present. 
-
-	All functionality, however, is 100% James W Moody.
- */
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Magic 8-Ball</title>
+<style>
 @import url(http://fonts.googleapis.com/css?family=Oswald:400);
 html {
 	background: #140014;
@@ -16,11 +15,11 @@ html {
 
 .fade-in {
   opacity:0;
-    -webkit-animation:fadeIn ease-in 1;  
+    -webkit-animation:fadeIn ease-in 1;
     -moz-animation:fadeIn ease-in 1;
     animation:fadeIn ease-in 1;
 
-    -webkit-animation-fill-mode:forwards;  
+    -webkit-animation-fill-mode:forwards;
     -moz-animation-fill-mode:forwards;
     animation-fill-mode:forwards;
 
@@ -32,17 +31,24 @@ html {
 /* Button Styling */
 
 button {
-	height: 50px;
-	width: 100px;
+	height: 35px;
+	width: 80px;
 	background-color: #140014;
 	color: #B585FC;
 	font-size: 22px;
 	border: none;
 	margin: auto;
 	display: block;
-	border: solid #B585FC;
-    margin-top: 20px;
-    margin-bottom: 20px;
+	border: solid #B585FC 2px;
+  border-radius: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  outline: none;
+  transition: all 0.3s ease 0s;
+}
+button:hover {
+  background-color: #B585FC;
+  color: #140014;
 }
 
 /* Overall Styling */
@@ -59,8 +65,8 @@ button {
 /* Ball Styling */
 
 .eightBallContainer, .ball {
-	height: 600px;
-	width: 600px;
+	height: 400px;
+	width: 400px;
 }
 .eightBallContainer {
 	margin: auto;
@@ -93,8 +99,8 @@ button {
 
 .window {
 	background: #000;
-	height: 250px;
-	width: 250px;
+	height: 150px;
+	width: 150px;
     left:50%;
     top:50%;
     border-radius: 50%;
@@ -102,9 +108,9 @@ button {
   	box-shadow: 10px -10px 10px rgba(20,20,20,0.6), 10px -10px 1px rgba(20,20,20,0.5),-10px -10px 1px rgba(20,20,20,0.5),10px 10px 1px rgba(50,50,50,0.5),-10px 10px 1px rgba(50,50,50,0.5), 8px -10px 10px rgba(20,20,20,0.6), -8px 10px 10px rgba(60,60,60,0.6), inset -10px 10px 5px rgba(200,0,20,0.05), inset 5px -10px 5px rgba(20,0,200,0.1);
 }
 .triangle {
-	border-left: 80px solid transparent;
-	border-right: 80px solid transparent;
-	border-top: 120px solid #390A6F;
+	border-left: 65px solid transparent;
+	border-right: 65px solid transparent;
+	border-top: 90px solid #390A6F;
     left:50%;
     top:60%;
 }
@@ -121,9 +127,30 @@ button {
     position: absolute;
     color: #B585FC;
     font-family: Oswald;
-    font-size: 12px;
+    font-size: 10px;
     text-align: center;
     width: 100%;
     height: 100%;
-    top: 25%;
+    top: 55%;
 }
+</style>
+</head>
+<body>
+
+<button id="link">Ask</button>
+<div class="eightBallContainer">
+	<div class="ball">
+		<div class="window">
+			<div class="triangle fade-in">
+					<div class="messageContainer fade-in"><span class="message fade-in"></span></div>
+            </div>
+		</div>
+	</div>
+</div>
+<script src="popup.js"></script>
+</body>
+</html>
+
+	<!-- Some styling elements borrowed from J. James Rockhill's project found at http://codepen.io/rockhill/pen/EtKsv
+	I've made quite a few changes to make it fit my own taste but some basic elements are still present.
+	All functionality, however, is 100% James W Moody. -->

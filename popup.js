@@ -1,29 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="utf-8"> 
-<title>Magic 8-Ball</title>
-<link rel = "stylesheet" type = "text/css" href = "style.css" />
-<link rel = "stylesheet" type = "text/css" href = "http://jameswmoody.com/reset.css" />
-</head>
-<body>
-
-<button onClick="window.location.reload()">Ask</button>
-<div class="eightBallContainer">
-	<div class="ball">
-		<div class="window">
-			<div class="triangle fade-in">
-					<div class="messageContainer fade-in"><span class="message fade-in"></span></div>
-            </div>
-		</div>
-	</div>
-</div>
-
-</body>
-<script>
+document.addEventListener('DOMContentLoaded', function() {
+    var link = document.getElementById('link');
+    // onClick's logic below:
+    link.addEventListener('click', function() {
+        window.location.reload();
+    });
+});
 
 var answer = Math.floor(Math.random()*21)
-
 switch (answer){
 	case 1:
 		document.querySelector('.message').innerHTML = "IT IS CERTAIN";
@@ -88,13 +71,3 @@ switch (answer){
 	default:
 		document.querySelector('.message').innerHTML = "TRY AGAIN";
 }
-</script>
-</html>
-
-<!-- 	
-	Some styling elements borrowed from J. James Rockhill's project found at http://codepen.io/rockhill/pen/EtKsv
-
-	I've made quite a few changes to make it fit my own taste but some basic elements are still present in the stylesheet. 
-
-	All functionality, however, is 100% James W Moody.
--->
