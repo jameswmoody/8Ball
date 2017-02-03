@@ -1,17 +1,13 @@
 {
   "manifest_version": 2,
 
-  "name": "Getting started example",
-  "description": "This extension shows a Google Image search result for the current page",
-  "version": "1.0",
+  "name": "Magic 8-Ball",
+  "description": "Now you can answer all of life's most challenging questions at the click of a button",
+  "version": "1.1",
 
   "browser_action": {
     "default_icon": "icon.png",
     "default_popup": "popup.html",
     "default_title": "Magic 8-Ball"
-  },
-  "permissions": [
-    "activeTab",
-    "https://ajax.googleapis.com/"
-  ]
+  }
 }
